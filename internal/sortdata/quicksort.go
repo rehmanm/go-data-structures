@@ -1,7 +1,5 @@
 package sortdata
 
-import "fmt"
-
 func QuickSort(data []int, leftindex, rightindex int) {
 
 	pi := partition(data, leftindex, rightindex)
@@ -36,7 +34,6 @@ func partition(data []int, leftindex, rightindex int) int {
 			leftindex++
 			rightindex--
 		}
-		fmt.Println(data, leftindex, rightindex, pivot)
 	}
 
 	return leftindex
