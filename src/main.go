@@ -57,13 +57,25 @@ func main() {
 	graph.AddNode(trees.Node{Data: "D"})
 	graph.AddNode(trees.Node{Data: "E"})
 
+	// graph.AddEdge(0, 1, 1)
+	// graph.AddEdge(1, 2, 1)
+	// graph.AddEdge(1, 4, 1)
+	// graph.AddEdge(2, 3, 1)
+	// graph.AddEdge(2, 4, 1)
+	// graph.AddEdge(4, 0, 1)
+	// graph.AddEdge(4, 2, 1)
+
 	graph.AddEdge(0, 1, 1)
+	graph.AddEdge(0, 3, 1)
 	graph.AddEdge(1, 2, 1)
-	graph.AddEdge(1, 4, 1)
 	graph.AddEdge(2, 3, 1)
-	graph.AddEdge(2, 4, 1)
-	graph.AddEdge(4, 0, 1)
-	graph.AddEdge(4, 2, 1)
+	graph.AddEdge(3, 4, 1)
 
 	graph.Print()
+
+	graph.DepthFirstSearch(4)
+
+	graph.Print()
+	graph.BreadthFirstSearch(4)
+
 }
